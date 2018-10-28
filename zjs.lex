@@ -14,7 +14,7 @@
 (setColor)     { printf("SET_COLOR %s\n", yytext); }
 [0-9]+         { printf("INT %s\n", yytext); }
 [0-9]+\.[0-9]+ { printf("FLOAT %s\n", yytext); }
-[\t|\s|\n]     { ; }
+[\t|\s|\n]+    { ; }
 .*             { printf("ERROR %s ON LINE %d\n", yytext, yylineno); }
 %%
 
